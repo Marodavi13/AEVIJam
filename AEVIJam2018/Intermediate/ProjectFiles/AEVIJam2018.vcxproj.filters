@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\AEVIJam2018.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{A7F09B62-1B56-4362-9ABF-D14FFE807723}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\AEVIJam2018.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\AEVIJam2018Editor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{53AF5CD7-4515-4FCE-8286-7D1C53F86547}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\AEVIJam2018">
+			<UniqueIdentifier>{725EC77B-E20C-4F1C-8775-CF77193E882C}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\AEVIJam2018\AEVIJam2018.Build.cs">
+			<Filter>Source\AEVIJam2018</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\AEVIJam2018\AEVIJam2018.cpp">
+			<Filter>Source\AEVIJam2018</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\AEVIJam2018\AEVIJam2018.h">
+			<Filter>Source\AEVIJam2018</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\AEVIJam2018\AEVIJam2018Block.cpp">
+			<Filter>Source\AEVIJam2018</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\AEVIJam2018\AEVIJam2018Block.h">
+			<Filter>Source\AEVIJam2018</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\AEVIJam2018\AEVIJam2018BlockGrid.cpp">
+			<Filter>Source\AEVIJam2018</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\AEVIJam2018\AEVIJam2018BlockGrid.h">
+			<Filter>Source\AEVIJam2018</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\AEVIJam2018\AEVIJam2018GameMode.cpp">
+			<Filter>Source\AEVIJam2018</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\AEVIJam2018\AEVIJam2018GameMode.h">
+			<Filter>Source\AEVIJam2018</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\AEVIJam2018\AEVIJam2018Pawn.cpp">
+			<Filter>Source\AEVIJam2018</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\AEVIJam2018\AEVIJam2018Pawn.h">
+			<Filter>Source\AEVIJam2018</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\AEVIJam2018\AEVIJam2018PlayerController.cpp">
+			<Filter>Source\AEVIJam2018</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\AEVIJam2018\AEVIJam2018PlayerController.h">
+			<Filter>Source\AEVIJam2018</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>
