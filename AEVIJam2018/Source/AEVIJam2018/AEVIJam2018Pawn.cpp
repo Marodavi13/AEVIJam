@@ -34,7 +34,7 @@ void AAEVIJam2018Pawn::Tick(float DeltaSeconds)
 			FVector Start, Dir, End;
 			PC->DeprojectMousePositionToWorld(Start, Dir);
 			End = Start + (Dir * 8000.0f);
-			TraceForBlock(Start, End, false);
+			(Start, End, false);
 		}
 	}
 }
@@ -59,7 +59,7 @@ void AAEVIJam2018Pawn::OnResetVR()
 	UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition();
 }
 
-void AAEVIJam2018Pawn::TriggerClick()
+void AAEVIJam2018Pawn::TriggerClick_Implementation()
 {
 	if (CurrentBlockFocus)
 	{
@@ -67,7 +67,7 @@ void AAEVIJam2018Pawn::TriggerClick()
 	}
 }
 
-void AAEVIJam2018Pawn::TraceForBlock(const FVector& Start, const FVector& End, bool bDrawDebugHelpers)
+void AAEVIJam2018Pawn::TraceForBlock_Implementation(const FVector& Start, const FVector& End, bool bDrawDebugHelpers)
 {
 	FHitResult HitResult;
 	GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility);
