@@ -23,7 +23,7 @@ void AAEVIJam2018Pawn::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 
-	if (APlayerController* PC = Cast<APlayerController>(GetController()))
+	/*if (APlayerController* PC = Cast<APlayerController>(GetController()))
 	{
 		if (UHeadMountedDisplayFunctionLibrary::IsHeadMountedDisplayEnabled())
 		{
@@ -41,7 +41,7 @@ void AAEVIJam2018Pawn::Tick(float DeltaSeconds)
 			End = Start + (Dir * 8000.0f);
 			TraceForBlock(Start, End, false);
 		}
-	}
+	}*/
 }
 
 void AAEVIJam2018Pawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
