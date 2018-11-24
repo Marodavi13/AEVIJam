@@ -39,7 +39,7 @@ void AAEVIJam2018Pawn::Tick(float DeltaSeconds)
 			FVector Start, Dir, End;
 			PC->DeprojectMousePositionToWorld(Start, Dir);
 			End = Start + (Dir * 8000.0f);
-			(Start, End, false);
+			TraceForBlock(Start, End, false);
 		}
 	}
 }
