@@ -1,3 +1,0 @@
-C:\Users\Mario\Documents\Proyectos Unreal\AEVIJam\AEVIJam2018\Source\AEVIJam2018\AEVIJam2018.Build.cs
-C:\Users\Mario\Documents\Proyectos Unreal\AEVIJam\AEVIJam2018\Source\AEVIJam2018.Target.cs
-C:\Users\Mario\Documents\Proyectos Unreal\AEVIJam\AEVIJam2018\Source\AEVIJam2018Editor.Target.cs
