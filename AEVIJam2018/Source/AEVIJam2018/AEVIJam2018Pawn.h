@@ -21,9 +21,28 @@ public:
 
 protected:
 	void OnResetVR();
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
-	void TriggerClick();
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+		void LeftClick();
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+		void RightClick(EInputEvent ButtonAction);
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+		void ActivateSkill(int NumberOfSkill);
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+		void MoveVertical(float Value);
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+		void MoveHorizontal(float Value);
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+		void RotateMap(float Value);
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+		void ZoomIn();
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+		void ZoomOut();
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
 	void TraceForBlock(const FVector& Start, const FVector& End, bool bDrawDebugHelpers);
 
 	UPROPERTY(EditInstanceOnly, BlueprintReadWrite)

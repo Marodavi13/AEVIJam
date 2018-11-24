@@ -8,6 +8,11 @@
 #include "Engine/World.h"
 #include "DrawDebugHelpers.h"
 
+
+DECLARE_DELEGATE_OneParam(DelegateInput, EInputEvent)
+DECLARE_DELEGATE_OneParam(DelegateInt32, int)
+
+
 AAEVIJam2018Pawn::AAEVIJam2018Pawn(const FObjectInitializer& ObjectInitializer) 
 	: Super(ObjectInitializer)
 {
@@ -44,7 +49,23 @@ void AAEVIJam2018Pawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	PlayerInputComponent->BindAction("OnResetVR", EInputEvent::IE_Pressed, this, &AAEVIJam2018Pawn::OnResetVR);
-	PlayerInputComponent->BindAction("TriggerClick", EInputEvent::IE_Pressed, this, &AAEVIJam2018Pawn::TriggerClick);
+	PlayerInputComponent->BindAction("LeftClick", EInputEvent::IE_Pressed, this, &AAEVIJam2018Pawn::LeftClick);
+	PlayerInputComponent->BindAction<DelegateInput>("RightClick", EInputEvent::IE_Pressed, this, &AAEVIJam2018Pawn::RightClick, EInputEvent::IE_Pressed);
+	PlayerInputComponent->BindAction<DelegateInput>("RightClick", EInputEvent::IE_Released, this, &AAEVIJam2018Pawn::RightClick, EInputEvent::IE_Released);
+
+	PlayerInputComponent->BindAction("ZoomIn", EInputEvent::IE_Pressed, this, &AAEVIJam2018Pawn::ZoomIn);
+	PlayerInputComponent->BindAction("ZoomOut", EInputEvent::IE_Pressed, this, &AAEVIJam2018Pawn::ZoomOut);
+
+
+	PlayerInputComponent->BindAction<DelegateInt32>("ActivateSkill1", EInputEvent::IE_Pressed, this, &AAEVIJam2018Pawn::ActivateSkill, 1);
+	PlayerInputComponent->BindAction<DelegateInt32>("ActivateSkill2", EInputEvent::IE_Pressed, this, &AAEVIJam2018Pawn::ActivateSkill, 2);
+	PlayerInputComponent->BindAction<DelegateInt32>("ActivateSkill3", EInputEvent::IE_Pressed, this, &AAEVIJam2018Pawn::ActivateSkill, 3);
+	PlayerInputComponent->BindAction<DelegateInt32>("ActivateSkill4", EInputEvent::IE_Pressed, this, &AAEVIJam2018Pawn::ActivateSkill, 4);
+
+
+	PlayerInputComponent->BindAxis("MoveVertical", this, &AAEVIJam2018Pawn::MoveVertical);
+	PlayerInputComponent->BindAxis("MoveHorizontal", this, &AAEVIJam2018Pawn::MoveHorizontal);
+
 }
 
 void AAEVIJam2018Pawn::CalcCamera(float DeltaTime, struct FMinimalViewInfo& OutResult)
@@ -59,15 +80,15 @@ void AAEVIJam2018Pawn::OnResetVR()
 	UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition();
 }
 
-void AAEVIJam2018Pawn::TriggerClick_Implementation()
+/*void AAEVIJam2018Pawn::TriggerClick_Implementation()
 {
 	if (CurrentBlockFocus)
 	{
 		CurrentBlockFocus->HandleClicked();
 	}
-}
+}*/
 
-void AAEVIJam2018Pawn::TraceForBlock_Implementation(const FVector& Start, const FVector& End, bool bDrawDebugHelpers)
+/*void AAEVIJam2018Pawn::TraceForBlock_Implementation(const FVector& Start, const FVector& End, bool bDrawDebugHelpers)
 {
 	FHitResult HitResult;
 	GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility);
@@ -97,4 +118,5 @@ void AAEVIJam2018Pawn::TraceForBlock_Implementation(const FVector& Start, const 
 		CurrentBlockFocus->Highlight(false);
 		CurrentBlockFocus = nullptr;
 	}
-}
+}*/
+
