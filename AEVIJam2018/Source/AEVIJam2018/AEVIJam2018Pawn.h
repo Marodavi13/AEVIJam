@@ -35,7 +35,9 @@ protected:
 		void MoveHorizontal(float Value);
 
 	UFUNCTION(BlueprintImplementableEvent)
-		void RotateMap(float Value);
+		void RotateHorizontal(float Value);
+	UFUNCTION(BlueprintImplementableEvent)
+		void RotateVertical(float Value);
 
 	UFUNCTION(BlueprintImplementableEvent)
 		void ZoomIn();

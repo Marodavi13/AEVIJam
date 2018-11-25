@@ -66,6 +66,10 @@ void AAEVIJam2018Pawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAxis("MoveVertical", this, &AAEVIJam2018Pawn::MoveVertical);
 	PlayerInputComponent->BindAxis("MoveHorizontal", this, &AAEVIJam2018Pawn::MoveHorizontal);
 
+	PlayerInputComponent->BindAxis("RotateHorizontal", this, &AAEVIJam2018Pawn::RotateHorizontal);
+	PlayerInputComponent->BindAxis("RotateVertical", this, &AAEVIJam2018Pawn::RotateVertical);
+
+
 }
 
 void AAEVIJam2018Pawn::CalcCamera(float DeltaTime, struct FMinimalViewInfo& OutResult)
